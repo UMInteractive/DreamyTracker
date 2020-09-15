@@ -19,16 +19,10 @@ $events = $database->select("events", [
 	"[>]event_type" => ["event_id" => "id"]
  
 	], [
-		"events.qualtrics_id",
+		"events.player_id",
 		"events.belief_id",
-		"events.dialog_id",
-		"events.subtype",
-		"events.character_id",
-		"event_type.name",
-		"events.days",
-		"events.risk",
-		"events.tan",
-		"events.attractiveness",
+		"events.path",
+		"events.elapsed",
 		"events.created_at"
 		], 
 	[
@@ -37,7 +31,7 @@ $events = $database->select("events", [
 //	"LIMIT" => 50
 	]);
 
-	echo "qualtrics_id,belief_id,dialog_id,subtype,character_id,event,days,risk,tan,attractiveness,timestamp\n";
+	echo "player_id,belief_id,path,elapsed,timestamp\n";
 	foreach($events as $event) {
 		echo implode($event, ",");
 		echo "\n";
