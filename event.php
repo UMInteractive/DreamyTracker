@@ -7,10 +7,10 @@
 	$elapsed = $_POST['time_elapsed'];
 	
 	$id = $database->insert("events", [
-		"qualtrics_id" => $player_id,
+		"player_id" => $player_id,
 		"belief_id" => $belief_id,
-		"dialog_id" => $path,
-		"event_id" => $elapsed,
+		"path" => $path,
+		"elapsed" => $elapsed,
 		]);
 var_dump($database->error());
 	echo $id;
