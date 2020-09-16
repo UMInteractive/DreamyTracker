@@ -20,6 +20,7 @@ $events = $database->select("events", [
  
 	], [
 		"events.player_id",
+		"events.npc",
 		"events.belief_id",
 		"events.path",
 		"events.elapsed",
