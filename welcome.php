@@ -12,10 +12,9 @@ header('Access-Control-Allow-Origin: https://games.nerdlab.miami', false);
 		
 		$id = $database->insert("sessions", [
 			"pid" => $pid,
-			"psid" => $psid,
-			"created_at" => Medoo::raw('NOW()')
+			"psid" => $psid
 			]);
-		echo $id;
+		echo "Received.";
 	}
 	else {
 		echo "Come again?";

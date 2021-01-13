@@ -2,13 +2,16 @@
 	header('Access-Control-Allow-Origin: https://games.nerdlab.miami', false);
 	require 'database.php';
 	error_reporting(0);
-	$id = $_POST['id'];
+	$pid = $_POST['pid'];
+	$psid = $_POST['psid'];
+
 	$username = $_POST['username'];
 	
-	if(!empty($id) && !empty($username)) {
-		$database->update("session", [
+	if(!empty($pid) && !empty($psid) && !empty($username)) {
+		$database->update("sessions", [
 			"username" => $username], [
-			"id" => $id
+			"pid" => $pid,
+			"psid" => $psid
 		]);
 		echo "Thank you.";
  	}
