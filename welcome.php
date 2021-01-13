@@ -1,6 +1,6 @@
 <?php
 	require 'database.php';
-
+	error_reporting(0);
 	$pid = $_POST['pid'];
 	$psid = $_POST['psid'];
 //	$username = $_POST['subtype'];

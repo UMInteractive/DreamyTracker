@@ -1,6 +1,6 @@
 <?php
 	require 'database.php';
-
+	error_reporting(0);
 	$id = $_POST['id'];
 	$username = $_POST['username'];
 	
