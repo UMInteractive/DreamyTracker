@@ -1,4 +1,5 @@
 <?php
+	header('Access-Control-Allow-Origin: https://games.nerdlab.miami', false);
 	require 'database.php';
 	error_reporting(0);
 	$id = $_POST['id'];
