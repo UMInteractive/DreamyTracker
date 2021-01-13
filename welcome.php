@@ -8,7 +8,8 @@
 	
 	$id = $database->insert("sessions", [
 		"pid" => $pid,
-		"psid" => $psid
+		"psid" => $psid,
+		"created_at" => Medoo::raw('NOW()')
 		]);
 	echo $id;
 ?>
