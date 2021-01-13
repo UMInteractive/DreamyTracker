@@ -4,18 +4,15 @@
 	$id = $_POST['id'];
 	$username = $_POST['username'];
 	
-	
-	$id = $database->update("sessions", [
-		"pid" => $pid,
-		"psid" => $psid
+	if(!empty($id) && !empty($username)) {
+		$database->update("session", [
+			"username" => $username], [
+			"id" => $id
 		]);
-	echo $id;
-
-
-$database->update("session", [
-	"username" => $username], [
-	"id" => $id
-]);
- 
+		echo "Thank you.";
+ 	}
+ 	else {
+ 		echo "Player not found...";
+ 	}
 
 ?>
