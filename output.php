@@ -15,12 +15,7 @@ $sessions = $database->select("sessions", [
 		"pid",
 		"updated_at",
 		"created_at"
-		], 
-	[
-//	"post.user_id" => 100,
-	"ORDER" => "created_at ASC"
-//	"LIMIT" => 50
-	]);
+		]);
 
 	echo "id,username,psid,pid,updated_at,created_at\n";
 	foreach($sessions as $session) {
